@@ -150,9 +150,8 @@ Anime is now supported in a **_somewhat limited_** capacity. Please note that th
 
 We've aimed to cover the inconsistent and unconventional naming conventions that prevail in anime content, but there may be certain naming styles, from specific groups or indexers, that we haven't accounted for.
 
-:::caution HELP
+:::tip HELP
 If you come across any anime naming schemes (**not _ONE_ "edge-case" release**) that we've missed, please let us know [**via Discord**](https://discord.gg/jpbUFzS5Wb).
-:::
 
 #### Partial Matching
 
