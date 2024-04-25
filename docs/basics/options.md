@@ -235,9 +235,9 @@ torznab: ["http://jackett:9117/api/v2.0/indexers/oink/results/torznab/api?apikey
 
 ### `sonarr`
 
-| Config file name | CLI short form | CLI Long form    | Format   | Default   |
-| ---------------- | -------------- | ---------------- | -------- | --------- |
-| `sonarr`         |                | `--sonarr <url>` | `string` | undefined |
+| Config file name | CLI short form | CLI Long form       | Format     | Default   |
+| ---------------- | -------------- | ------------------- | ---------- | --------- |
+| `sonarr`         |                | `--sonarr <url(s)>` | `string[]` | undefined |
 
 :::warning NOTICE
 This feature is a v6 only feature.
@@ -267,9 +267,9 @@ sonarr: "http://sonarr:8989/?apikey=12345",
 
 ### `radarr`
 
-| Config file name | CLI short form | CLI Long form    | Format   | Default   |
-| ---------------- | -------------- | ---------------- | -------- | --------- |
-| `radarr`         |                | `--radarr <url>` | `string` | undefined |
+| Config file name | CLI short form | CLI Long form       | Format     | Default   |
+| ---------------- | -------------- | ------------------- | ---------- | --------- |
+| `radarr`         |                | `--radarr <url(s)>` | `string[]` | undefined |
 
 :::warning NOTICE
 This feature is a v6 only feature.
