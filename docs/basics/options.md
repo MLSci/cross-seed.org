@@ -80,7 +80,7 @@ The configuration file uses JavaScript syntax, which means:
 | [`torznab`](#torznab)                               | **Required** |
 | [`torrentDir`](#torrentdir)                         | **Required** |
 | [`outputDir`](#outputdir)                           | **Required** |
-| [`dataDirs`](#datadir)                              |              |
+| [`dataDirs`](#datadirs)                             |              |
 | [`dataCategory`](#datacategory)                     |              |
 | [`linkCategory`](linkcategory)                      |              |
 | [`duplicateCategory`](#duplicatecategory)           |              |
@@ -115,7 +115,7 @@ The configuration file uses JavaScript syntax, which means:
 | [`torznab`](#torznab)                               | **Required** |
 | [`torrentdir`](#torrentdir)                         | **Required** |
 | [`outputdir`](#outputdir)                           | **Required** |
-| [`dataDirs`](#datadir)                              |              |
+| [`dataDirs`](#datadirs)                             |              |
 | [`dataCategory`](#datacategory)                     |              |
 | [`linkCategory`](linkcategory)                      |              |
 | [`duplicateCategory`](#duplicatecategory)           |              |
@@ -327,6 +327,10 @@ It is necessary to insert double-slashes for your paths, as seen in the examples
 to create a link to the original file in the linkDir during data-based searchs where it cannot
 find a associated torrent file.
 
+:::tip
+
+We do not recommend you include your [`linkDir`](#linkdir) in the `dataDirs` option.
+:::
 :::caution Docker
 
 You will need to mount the volume for `cross-seed` to have access to the data and linkDir.
@@ -484,6 +488,11 @@ duplicateCategories: false,
 to create a link to the original file in the `linkDir` during searches where the original
 data is accessible (both torrent and data-based matches).
 
+:::tip
+
+It is best if your `linkDir` is not _INSIDE_ of your included [`dataDirs`](#datadirs) folders. This is to prevent recursive and
+erroneous searches of folders used in linking folder structure.
+:::
 :::caution Docker
 
 You will need to mount the volume for `cross-seed` to have access to the dataDir and linkDir.
