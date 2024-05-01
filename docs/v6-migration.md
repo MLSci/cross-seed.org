@@ -57,6 +57,8 @@ You can grab the new [`config.template.js`](https://raw.githubusercontent.com/cr
 
 -   [`blockList`](./basics/options.md#blocklist)
 
+-   [`seasonFromEpisodes`](./basics/options.md#seasonfromepisodes)
+
 :::
 
 ### Stricter `config.js` Validation
@@ -189,6 +191,12 @@ The series or movie **must be added in your instance of Sonarr or Radarr.** You 
 
 **We do not query any external metadata servers.**
 :::
+
+#### Ensemble or "Torrent Aggregation"
+
+Many of you may be familiar with things like [seasonpackarr](https://github.com/nuxencs/seasonpackarr) which - for qBittorrent - will aggregate/join your already downloaded episodes into season packs when they are combined and uploaded on your trackers, and inject them. `cross-seed` can now do the same, and potentially more, linking and then creating a "combined" set of matching torrents or data to get you seeding data you already have faster. This applies to things like season packs, but also could be used in other cases like multi-season or potentially movie packs.
+
+This functionality for season packs is linked to the new option, `seasonFromEpisodes` - which can be set to either `true` or `false`.
 
 ### Other Miscellaneous Changes
 

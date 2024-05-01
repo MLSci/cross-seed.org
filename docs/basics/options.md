@@ -90,6 +90,7 @@ The configuration file uses JavaScript syntax, which means:
 | [`skipRecheck`](#skiprecheck)                       |              |
 | [`includeEpisodes`](#includeepisodes)               |              |
 | [`includeSingleEpisodes`](#includesingleepisodes)   |              |
+| [`seasonFromEpisodes`](#seasonfromepisodes)         |              |
 | [`includeNonVideos`](#includenonvideos)             |              |
 | [`fuzzySizeThreshold`](#fuzzysizethreshold)         |              |
 | [`excludeOlder`](#excludeolder)                     |              |
@@ -127,6 +128,7 @@ The configuration file uses JavaScript syntax, which means:
 | [`skipRecheck`](#skiprecheck)                       |              |
 | [`includeEpisodes`](#includeepisodes)               |              |
 | [`includeSingleEpisodes`](#includesingleepisodes)   |              |
+| [`seasonFromEpisodes`](#seasonfromepisodes)         |              |
 | [`includeNonVideos`](#includeNonvideos)             |              |
 | [`fuzzySizeThreshold`](#fuzzysizethreshold)         |              |
 | [`excludeOlder`](#excludeolder)                     |              |
@@ -756,6 +758,29 @@ cross-seed search # will not include episodes
 includeSingleEpisodes: true,
 
 includeSingleEpisodes: false,
+```
+
+### `seasonFromEpisodes`
+
+| Config file name     | CLI short form | CLI long form            | Format    | Default |
+| -------------------- | -------------- | ------------------------ | --------- | ------- |
+| `seasonFromEpisodes` | `N/A`          | `--season-from-episodes` | `boolean` | `false` |
+
+Set this to `true` to aggregate/join single episodes to season packs when they are sent to `cross-seed` for search or RSS.
+
+#### `seasonFromEpisodes` Examples (CLI)
+
+```shell
+cross-seed search --season-from-episodes # will combine episodes into season packs if possible
+cross-seed search # will not join episodes to season packs
+```
+
+#### `seasonFromEpisodes` Examples (Config file)
+
+```js
+seasonFromEpisodes: true,
+
+seasonFromEpisodes: false,
 ```
 
 ### `includeNonVideos`
